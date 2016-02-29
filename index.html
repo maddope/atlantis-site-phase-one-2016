@@ -2,27 +2,34 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pure JS One Page Scroll by Pete R. | The Pete Design</title>
-	<meta name="title" content="Pure JS One Page Scroll by Pete R. | The Pete Design" />
-	<meta name="description" content="Pure JS One Page Scroll is the javascript version (no need for jQuery any more) of the infamous jQuery One Page Scroll. Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin" />
+	<title>Atlantis</title>
+	<meta name="title" content="" />
+	<meta name="description" content="" />
 	<link rel="image_src" href="/images/onepage_scroll_image.png" />
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<meta content="http://www.thepetedesign.com/demos/purejs_onepage_scroll_demo.html" property="og:url" />
-	<meta content="http://www.thepetedesign.com/images/onepage_scroll_image.png" property="og:image" />
 	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
-	<meta name="author" content="Pete R.">
-	<link rel="canonical" href="http://www.thepetedesign.com/demos/purejs_onepage_scroll_demo.html" />
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
-  <script type="text/javascript" src="onepagescroll.js"></script>
-  <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+        
+  <script type="text/javascript" src="js/onepagescroll.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+  <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/nav_style.css">
+
   <style>
+      
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url('gotham_rounded_font/GothamRnd-Book.otf');
+    }
+      
     html {
       height: 100%;
     }
     body {
-      background: #E2E4E7;
+      background: #d6daf0;
       padding: 0;
       text-align: center;
       font-family: 'open sans';
@@ -247,9 +254,136 @@
       z-index: 1;
     }
     
-    .main section.page1 {
-      background:rgb(230, 217, 200);
-    }
+
+    
+    
+    
+    
+    
+figure {
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /*animation*/
+  
+  animation: slideShow 24s linear infinite 0s;
+  -o-animation: slideShow 24s linear infinite 0s;
+  -moz-animation: slideShow 24s linear infinite 0s;
+  -webkit-animation: slideShow 24s linear infinite 0s;
+}
+
+figurecaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+}
+
+.pic-1 {
+  opacity: 1;
+  background: url(images/bg_atlantis.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* keyframes*/
+
+@keyframes 
+slideShow {  0% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ transform:scale(1.1);
+ -ms-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transformm:scale(1);
+}
+}
+ @-o-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -o-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -o-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -o-transformm:scale(1);
+}
+}
+ @-moz-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -moz-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -moz-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -moz-transformm:scale(1);
+}
+}
+ @-webkit-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -webkit-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -webkit-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transformm:scale(1);
+}
+} 
+    
+    
+    
+    
+    
+    
+    
     .main section.page1 h1 {
       float: none;
       width: 435px;
@@ -308,29 +442,7 @@
       background: rgba(0, 0, 0, 0.25);
       color: #FFF;
       }
-    .main section.page3 {
-      background:url(tilted-phone.png) no-repeat 156px -150px ;
-    }
-    .main section.page3 .page_container {
-      overflow: hidden;
-      width: 500px;
-      right: -285px;
-    }
-    .main section.page3 h1 {
-      text-align: left;
-      padding: 0;
-      margin-bottom: 0;
-      font-size: 70px;
-      letter-spacing: -1px;
-      color: black;
-    }
-    .main section.page3 h2 {
-      color: rgba(0,0,0,0.85);
-      text-align: left;
-      line-height: 160%;
-      font-weight: 100;
-      font-size: 21px;
-    }
+    
     body.disabled-onepage-scroll .onepage-wrapper  section {
       min-height: 100%;
       height: auto;
@@ -405,13 +517,63 @@
       font-size: 14px;
     }
 	</style>
+        
+    <script>
+    function view_page_two(window) {  	      
+        _addClass(document.querySelector(settings.sectionContainer + "[data-index='2']"), "active");
+  	  _addClass(body, "viewing-page-2");
+  		if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a[data-index='2']"), "active");
+        }        
+    </script>
+    
 </head>
 <body>
     
-    <div class="wrapper">	
+    
+    
+ 
+    
+    
+    
+    <div class="wrapper">
+        
+<header class="main_h">
+
+    <div class="row">
+        <a class="logo" href="#"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">SWEEPS</a></li>
+                <li><a href="#" onclick="go(el3);">SUPER SOAKERS</a></li>
+                
+                
+                <li><a href="game.html">TARGET PRACTICE</a></li>
+            </ul>
+        </nav>
+
+    </div> <!-- / row -->
+
+    
+    
+</header>
+        
 	  <div class="main">
-	    
-      <section class="page1">
+	   
+
+              
+              
+      <section class="page1" id="sweeps">
+          
+            <figure class="pic-1"></figure>
+
+          
         <div class="page_container">
           <h1><strong>Pure JS</strong> One Page Scroll v1.2</h1>
           <h2>Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin. (<strong>No jQuery Required</strong>)</h2>
@@ -425,7 +587,7 @@
   	    <img src="phones.png" alt="phones">
       </section>
 	    
-	    <section class="page2">
+	    <section class="page2" id="super_soakers">
 	      <div class="page_container">
           <h1>Ready-to-use plugin</h1>
           <h2>All you need is an HTML markup, call the script and BAM!</h2>
@@ -442,19 +604,9 @@
 	      </div>
       </section>
 	    
-	    <section class="page3">
-	      <div class="page_container">
-          <h1>Pretty Neat Eh?</h1>
-          <h2>You can customize the animation timing, the selector or even the animation easing using CSS3. I can't wait to see what you guys will come up with. Don't forget to grab them for free on Github'</h2>
-          <div class="btns">
-  	        <a class="reload btn" href="https://github.com/peachananr/purejs-onepage-scroll">Download on Github</a>
-  	      </div>
-  	    </div>
-      </section>
+
       
     </div>
-    <a class="back" href="http://www.thepetedesign.com/#plugins">Back to The Pete Design</a>
-    <a href="https://github.com/peachananr/purejs-onepage-scroll"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   </div>
   <script>
 	 onePageScroll(".main", {
@@ -463,6 +615,10 @@
      responsiveFallback: false
    });
 		
-	</script>
+  </script>
+        
+  <script src="js/nav.js"></script>
+
+        
 </body>
 </html>
