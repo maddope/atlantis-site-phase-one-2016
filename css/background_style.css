@@ -62,7 +62,7 @@
     background-position: 50% 100%;
   }
 }
-.container {
+#container {
   //background-color: #abebfe;
   z-index: 1;
   position: relative;

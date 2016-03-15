@@ -1,17 +1,51 @@
-<!doctype html>
-<html>
-<head>
-	<title>Atlantis Super Soakers</title>
-        
-        <meta charset="utf-8">
-	<meta name="description" content="" />
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
         <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-        
-	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+
+        <title>Atlantis Super Soakers - Cartoon Network</title>
+        <link rel="stylesheet" href="http://www.cartoonnetwork.com/static/global/css/global.css">
+
+		<script Language="JavaScript">
+		var serverTime = '<!--#echo var="DATE_LOCAL"-->';
+		</script>
+		<script language="javascript" type="text/javascript" src="/tools/js/swfobject.js"></script>
+
+		<script language="javascript" type="text/javascript" src="/tools/js/utils.js"></script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/parseTime.js"></script>
+		<script language="JavaScript" type="text/javascript" src="/tools/js/cookies.js"></script>
+		<script language="JavaScript" src="http://i.cdn.turner.com/analytics/cartoon/ais.js"></script>
+		<script language="javascript" type="text/javascript" src="/toon_adspaces/cnn_adspaces.js"></script>
+		<script language="javaScript" type="text/javascript">
+		  var previewFormat = "";
+		</script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/previewPage.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/jquery.min.js"></script>
+		<script type="text/javascript" src="/tools/universal-nav/jquery-migrate.min.js"></script>
+
+		<script language="javaScript" type="text/javascript" src="/tools/js/jquery/jquery.jcarousel.min.js"></script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/jquery/jquery.tools.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/jquery/jquery.cookie.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/flash_detect_min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/CartoonMSIB.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/data.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/login_module.js"></script>
+
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/modernizr.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/EasePack.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/ScrollToPlugin.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/TweenMax.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/cn-global.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/universal-nav.js"></script>
+		<link rel="stylesheet" type="text/css" href="/tools/universal-nav/universal-nav.css">
+		
+		<!--VENDOR CSS HERE-->
+		<link rel="shortcut icon" id="favicon" href="favicon.png"> 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
         
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 
         <link rel="stylesheet" href="css/nav_style.css">
 
@@ -29,7 +63,7 @@
     html {
       height: 1020px;
     }
-    body {
+    div#container {
       padding: 0;
       text-align: center;
       font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
@@ -293,7 +327,12 @@
       text-align: center;			
       color: #0faaef;			
       font-family: arial,helvetica;
-    }     
+    } 
+		 #global-footer {
+				 margin-top:345px;
+			 }    
+	
+	
     
     @media only screen and (min-width: 860px) {
         
@@ -369,24 +408,28 @@
            margin-top: -780px;
            margin-left: 431px;
         }
+		
+		 #global-footer {
+				 margin-top: 0;
+			 }  
                 
              
     }
     
     
   </style>
-    
-    
-    
-</head>
+		<!--END VENDOR CSS -->
+		
+	</head>
+	<body>
+		<!--#include virtual="/tools/universal-nav/universal_nav.html" -->
 
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<div id="container">
 
-
-
-
-<body>
-    
-<div class="container">
     <div id="background_pan">    
     
 <div class="wrapper">
@@ -484,18 +527,19 @@
     <div id="main">
       
     </div>
-</div>
-        
-        
-        
-<script src="js/nav.js"></script>
+			
+		</div><!--end #container-->
 
-<script src="js/jquery.reel.js"></script>
-  
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+		<!--#include virtual="/tools/universal-nav/footer.html" -->
+		
+		<!--VENDOR JS HERE-->
+		<script src="js/nav.js"></script>
 
-        
-</body>
-</html>
+		<script src="js/jquery.reel.js"></script>
+
+		<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+		<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+		<!--END VENDOR JS -->
+	</body>
+</html> 

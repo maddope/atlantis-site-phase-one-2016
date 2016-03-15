@@ -1,548 +1,605 @@
-<!doctype html>
-<html>
-<head>
-	<title>Atlantis Home</title>
-        
-        <meta charset="utf-8">
-	<meta name="description" content="" />
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
         <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-        
-	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
-        
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
 
-   <link rel="stylesheet" href="css/nav_style.css">
+        <title>Atlantis Home - Cartoon Network</title>
+        <link rel="stylesheet" href="http://www.cartoonnetwork.com/static/global/css/global.css">
 
-  
-   <link rel="stylesheet" href="css/normalize.css">
-   <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-   <link rel="stylesheet" href="css/background_style.css">
-   
-   <link href="css/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
-  
-  
-  <style>
-      
-    @font-face {
-      font-family: Gotham Rounded;
-      src: url('gotham_rounded_font/GothamRnd-Book.otf');
-    }
-    
-    html {
-      height: 1020px;
-    }
-    body {
-      background: #ffffff;
-      //background-image: url("images/bg_atlantis.jpg");
-      //-webkit-background-size: cover;
-      //-moz-background-size: cover;
-      //-o-background-size: cover;
-      //background-size: cover; 
-      //background-size: 100% 100%;
-      padding: 0;
-      text-align: center;
-      font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
-      position: relative;
-      margin: 0;
-      //height: 100%;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    a {
-      text-decoration: none;
-    }
-    
-    
-    h1, h2 {
-      float: left;
-    }
-    h1 {
-      margin-top: 100px;
-      color: #000;
-      margin-bottom: 5px;
-      font-size: 70px;
-      letter-spacing: -4px;
-      font-weight: 100;
-    }
-    h1 span {
-      font-size: 26px;
-      margin: 0 5px;
-      text-transform: capitalize;
-      background: rgba(0,0,0,0.85);
-      display: inline-block;
-      color: #6D461D;
-      border-radius: 5px 5px;
-      -webkit-border-radius: 5px 5px;
-      -moz-border-radius: 5px 5px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
-      padding: 3px 10px;
-    }
-    h2 {
+		<script Language="JavaScript">
+		var serverTime = '<!--#echo var="DATE_LOCAL"-->';
+		</script>
+		<script language="javascript" type="text/javascript" src="/tools/js/swfobject.js"></script>
 
-    }
-    
-    .enter_text {
-      margin-left: -70px;
-      margin-bottom: -8px;
-      font-size: 14px;
-      padding-top: 13px;
-    }
-    
-    form input {
-	color: #000000;
-	border: none;
-	font-size: 20px;
-	font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
-	width: 247px;
-	height: 46px;
-	background: url(images/entry_field_bg_small.png) no-repeat;
-        padding: 10px 12px;
-    }
-    form input#submit {
-	border: none;
-	padding: 0px 0px 0px 0px;
-	margin: 0 0 0 0;
-	width: 65px;
-	height: 65px;
-	overflow: hidden;
-	background: url("images/go_btn_over_small.png") no-repeat;
-	cursor: pointer;
-    }
+		<script language="javascript" type="text/javascript" src="/tools/js/utils.js"></script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/parseTime.js"></script>
+		<script language="JavaScript" type="text/javascript" src="/tools/js/cookies.js"></script>
+		<script language="JavaScript" src="http://i.cdn.turner.com/analytics/cartoon/ais.js"></script>
+		<script language="javascript" type="text/javascript" src="/toon_adspaces/cnn_adspaces.js"></script>
+		<script language="javaScript" type="text/javascript">
+		  var previewFormat = "";
+		</script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/previewPage.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/jquery.min.js"></script>
+		<script type="text/javascript" src="/tools/universal-nav/jquery-migrate.min.js"></script>
 
-    .privacy_text {
-        font-size: 11px;
-        color: #0faaef;
-    }
+		<script language="javaScript" type="text/javascript" src="/tools/js/jquery/jquery.jcarousel.min.js"></script>
+		<script language="javaScript" type="text/javascript" src="/tools/js/jquery/jquery.tools.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/jquery/jquery.cookie.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/flash_detect_min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/CartoonMSIB.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/data.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/js/global/login_module.js"></script>
 
-    .rules_text {
-        font-size: 11px;
-        color: #0faaef;
-    }
-    
-    .pointer {
-      color: #9b59b6;
-      font-family: 'Pacifico', cursive;
-      font-size: 30px;
-      margin-top: 15px;
-    }
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/modernizr.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/EasePack.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/ScrollToPlugin.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/TweenMax.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/cn-global.js"></script>
+		<script language="javascript" type="text/javascript" src="/tools/universal-nav/universal-nav.js"></script>
+		<link rel="stylesheet" type="text/css" href="/tools/universal-nav/universal-nav.css">
+		
+		<!--VENDOR CSS HERE-->
+		<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+		
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 
-    .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-    }
+		<link rel="stylesheet" href="css/nav_style.css">
 
-    .main h1.demo1 {
-      background: #1ABC9C;
-    }
-      
-    .btn {
-      width: 200px;
-      color: rgb(255, 255, 255);
-      border: 4px solid rgb(0, 0, 0);
-      background: rgba(3, 3, 3, 0.75);
-    }
-    
-    .clear {
-      width: auto;
-    }
-    
-    .btn:hover, .btn:hover {
-      background: #444;
-    }
-    
-    .btns {
-      width: 320px;
-      margin: 50px auto;
-    }
-    
-    .second_place_area {
-      margin-top: 37px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 320px;
-      border-style: solid;
-      border-width: 0px;
-      border-color: yellow;
-      display: block;
-      position: relative;
-    }
-    
-    .home_text {
-      text-align: center;
-      color: rgba(0,0,0,0.99);
-      padding: 6px;
-      opacity: 1;
-      clear: both;
-      width: 320px;
-      border-style: solid;
-      border-width: 0px;
-      float: left;
-      margin-bottom: 15px;
-    }
-    
-    .home_text a {
-      color: rgba(0,0,0,0.99);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    .home_text_btn {
-      border-style: solid;
-      border-width: 0px;
-      width: 160px;
-      float: center;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    header {
-      position: relative;
-      z-index: 10;
-    }
-    .main section .page_container {
-      position: relative;
-      top: 25%;
-      margin: 0 auto 0;
-      max-width: 950px;
-    }
-    .main section  {
-      overflow: hidden;
-    }
-    
-    .main section > img {
-      position: absolute;
-      max-width: 100%;
-    }
-    
-    .main section.page1 {
-      background-repeat: no-repeat;
-      background-position: left bottom;
-      
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; 
-      background-size: 100% 100%;
-      
-    }
-    
-    .atlantis_home_logo {
-      display: block;
-      padding: 0;
-      margin-top: 127px;
-      margin-left: auto;
-      margin-right: auto;
-      height: 91px;
-      width: 320px;	
-    }
-    
-    .search_box {
-      color: rgba(0,0,0,0.85);
-      width: 320px;
-      height: 123px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 43px;
-      background-color: #ffffff;
-      z-index: 12;
-      display: block;
-      position: relative;
-    }
-    
-    .home_btn_table {
-      margin-left: -160px;
-    }
-    
-    .video_thumb {
-      margin-top: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 12;
-    }
-  
-    .main section.page1 h1 strong {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 16px;
-      padding: 10px 10px;
-      display: inline-block;
-      line-height: 140%;
-      background: #FFF;
-      border-radius: 3px;
-      position: relative;
-      top: -13px;
-      
-    }
-    
-    .text-btn {
-      display: block;
-      color: #000;
-      border-bottom: 2px dotted #000;
-      max-width: 300px;
-      margin: 30px auto 30px;
-      line-height: 200%;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 14px;
-    }
-    
-    .clarence { 
-      margin-top: 0px;
-      margin-left: -100px;
-      z-index: 10;
-    } 
-    
-    .lightbox { display: none;
-       border:none;  
-       background-color: #000;
-       controls preload="none";
-       width: 320px;
-       height: 180px;
-    }
-    
-    .home_vid_thumb_rollover {
-       display: inline-block;
-       background: url("images/video_thumbnail_320x180.jpg");
-       width: 320px;
-       height: 180px;
-    }
- 
-        .chyron { 
-          display: block;
-          position: relative;
-  	  height: 110px;
-  	  width: 320px;	          
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 60px;
-          font-size: 10px;
-          text-align: center;			
-          color: #3574c1;			
-          font-family: arial,helvetica;
-        }
 
-        
-    @media only screen and (min-width: 860px) {
-       
-        .atlantis_home_logo {
-          margin-top: 193px;
-          width: 392px;
-          height: 112px;
-        }
-        
-        .search_box {
-          width: 555px;
-          height: 215px;
-        }
-        
-    	.enter_text {
-          margin-left: -160px;
-          margin-bottom: -8px;
-          padding-top: 43px;
-          font-size: 18px;
-        }	
-        
-        form input {
-          font-size: 25px;
-	  width: 393px;
-	  height: 73px;
-	  padding: 0 19px;
-	  background: url(images/entry_field_bg.png) no-repeat;
-        }
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+		<link rel="stylesheet" href="css/background_style.css">
 
-        form input#submit {
-	  width: 100px;
-	  height: 100px;
-	  background: url("images/go_btn.gif") no-repeat;
-        }	
+		<link href="css/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
 
-        form input#submit:hover { 
-	  background: url("images/go_btn_over.gif");
-        }
 
-        .privacy_text {
-          font-size: 15px;
-          color: #0faaef;
-        }
+	   <style>
 
-        .rules_text {
-          font-size: 15px;
-          color: #0faaef;
-        }
-        
-        .home_btn_table {
-          margin-left: -290px;
-        }
-        
-        .second_place_area {
-          width: 572px;
-        }
-        
-        .home_text {
-          text-align: right;
-          width: 400px;
-          margin-bottom: 0px;
-        }
-        
-        .home_text_btn {
-          border-width: 0px;
-          float: left;
-        }
-        
-        .video_thumb {
-          margin-top: 124px;
-        }
-        
-        .lightbox { display: none;
-          width: 854px;
-          height: 480px;
-        }
-        
-        .clarence { 
-          margin-top: -750px;
-          margin-left: -740px;
-          z-index: 10;
-	}                          
+		 @font-face {
+		   font-family: Gotham Rounded;
+		   src: url('gotham_rounded_font/GothamRnd-Book.otf');
+		 }
+		 div#container {
+		   background: #ffffff;
+		   //background-image: url("images/bg_atlantis.jpg");
+		   //-webkit-background-size: cover;
+		   //-moz-background-size: cover;
+		   //-o-background-size: cover;
+		   //background-size: cover; 
+		   //background-size: 100% 100%;
+		   padding: 0;
+		   text-align: center;
+		   font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
+		   position: relative;
+		   margin: 0;
+		   //height: 100%;
+		   -webkit-font-smoothing: antialiased;
+		 }
 
-        .home_vid_thumb_rollover {
-          background: url("images/video_thumbnail_392x220.jpg");
-          width: 392px;
-          height: 220px;
-        }
+		 a {
+		   text-decoration: none;
+		 }
 
-        .home_vid_thumb_rollover:hover { 
-          background: url("images/video_thumbnail_392x220_over.jpg");
-        }  
-        
-        .chyron { 
-          width: 995px;
-          margin-top: 115px;
-        }
-                     
-    }
-    
-    
-  </style>
-    
-    
-                    <div class="hidden">
-                        <script type="text/javascript">
+
+		 h1, h2 {
+		   float: left;
+		 }
+		 h1 {
+		   margin-top: 100px;
+		   color: #000;
+		   margin-bottom: 5px;
+		   font-size: 70px;
+		   letter-spacing: -4px;
+		   font-weight: 100;
+		 }
+		 h1 span {
+		   font-size: 26px;
+		   margin: 0 5px;
+		   text-transform: capitalize;
+		   background: rgba(0,0,0,0.85);
+		   display: inline-block;
+		   color: #6D461D;
+		   border-radius: 5px 5px;
+		   -webkit-border-radius: 5px 5px;
+		   -moz-border-radius: 5px 5px;
+		   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+		   padding: 3px 10px;
+		 }
+		 h2 {
+
+		 }
+
+		 .enter_text {
+		   margin-left: -70px;
+		   margin-bottom: -8px;
+		   font-size: 14px;
+		   padding-top: 13px;
+		 }
+
+		 form input {
+		 color: #000000;
+		 border: none;
+		 font-size: 20px;
+		 font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
+		 width: 247px;
+		 height: 46px;
+		 background: url(images/entry_field_bg_small.png) no-repeat;
+			 padding: 10px 12px;
+		 }
+		 form input#submit {
+		 border: none;
+		 padding: 0px 0px 0px 0px;
+		 margin: 0 0 0 0;
+		 width: 65px;
+		 height: 65px;
+		 overflow: hidden;
+		 background: url("images/go_btn_over_small.png") no-repeat;
+		 cursor: pointer;
+		 }
+
+		 .privacy_text {
+			 font-size: 11px;
+			 color: #0faaef;
+		 }
+
+		 .rules_text {
+			 font-size: 11px;
+			 color: #0faaef;
+		 }
+
+		 .pointer {
+		   color: #9b59b6;
+		   font-family: 'Pacifico', cursive;
+		   font-size: 30px;
+		   margin-top: 15px;
+		 }
+
+		 .main {
+		   float: left;
+		   width: 100%;
+		   margin: 0 auto;
+		 }
+
+		 .main h1.demo1 {
+		   background: #1ABC9C;
+		 }
+
+		 .btn {
+		   width: 200px;
+		   color: rgb(255, 255, 255);
+		   border: 4px solid rgb(0, 0, 0);
+		   background: rgba(3, 3, 3, 0.75);
+		 }
+
+		 .clear {
+		   width: auto;
+		 }
+
+		 .btn:hover, .btn:hover {
+		   background: #444;
+		 }
+
+		 .btns {
+		   width: 320px;
+		   margin: 50px auto;
+		 }
+
+		 .second_place_area {
+		   margin-top: 37px;
+		   margin-left: auto;
+		   margin-right: auto;
+		   width: 320px;
+		   border-style: solid;
+		   border-width: 0px;
+		   border-color: yellow;
+		   display: block;
+		   position: relative;
+		 }
+
+		 .home_text {
+		   text-align: center;
+		   color: rgba(0,0,0,0.99);
+		   padding: 6px;
+		   opacity: 1;
+		   clear: both;
+		   width: 320px;
+		   border-style: solid;
+		   border-width: 0px;
+		   float: left;
+		   margin-bottom: 15px;
+		 }
+
+		 .home_text a {
+		   color: rgba(0,0,0,0.99);
+		   text-decoration: none;
+		   font-weight: bold;
+		 }
+
+		 .home_text_btn {
+		   border-style: solid;
+		   border-width: 0px;
+		   width: 160px;
+		   float: center;
+		   display: block;
+		   margin-left: auto;
+		   margin-right: auto;
+		 }
+
+		 header {
+		   position: relative;
+		   z-index: 10;
+		 }
+		 .main section .page_container {
+		   position: relative;
+		   top: 25%;
+		   margin: 0 auto 0;
+		   max-width: 950px;
+		 }
+		 .main section  {
+		   overflow: hidden;
+		 }
+
+		 .main section > img {
+		   position: absolute;
+		   max-width: 100%;
+		 }
+
+		 .main section.page1 {
+		   background-repeat: no-repeat;
+		   background-position: left bottom;
+
+		   -webkit-background-size: cover;
+		   -moz-background-size: cover;
+		   -o-background-size: cover;
+		   background-size: cover; 
+		   background-size: 100% 100%;
+
+		 }
+
+		 .atlantis_home_logo {
+		   display: block;
+		   padding: 0;
+		   margin-top: 127px;
+		   margin-left: auto;
+		   margin-right: auto;
+		   height: 91px;
+		   width: 320px;	
+		 }
+
+		 .search_box {
+		   color: rgba(0,0,0,0.85);
+		   width: 320px;
+		   height: 123px;
+		   margin-left: auto;
+		   margin-right: auto;
+		   margin-top: 43px;
+		   background-color: #ffffff;
+		   z-index: 12;
+		   display: block;
+		   position: relative;
+		 }
+		 
+		 .search_box table {
+			 margin-left: 5px;
+		 }
+		 
+		 .search_box table td {
+			 vertical-align: middle;
+			height: 68px;
+		 }
+		 
+		 .search_box table td input {
+			 font-size: 
+		 }
+
+		 .home_btn_table {
+		   margin-left: -30px;
+		 }
+		 
+		 .home_btn_table table td {
+			 height: auto;
+		 }
+
+		 .video_thumb {
+		   margin-top: 40px;
+		   margin-left: auto;
+		   margin-right: auto;
+		   z-index: 12;
+		 }
+
+		 .main section.page1 h1 strong {
+		   text-transform: uppercase;
+		   letter-spacing: 1px;
+		   font-size: 16px;
+		   padding: 10px 10px;
+		   display: inline-block;
+		   line-height: 140%;
+		   background: #FFF;
+		   border-radius: 3px;
+		   position: relative;
+		   top: -13px;
+
+		 }
+
+		 .text-btn {
+		   display: block;
+		   color: #000;
+		   border-bottom: 2px dotted #000;
+		   max-width: 300px;
+		   margin: 30px auto 30px;
+		   line-height: 200%;
+		   font-weight: bold;
+		   text-transform: uppercase;
+		   letter-spacing: 1px;
+		   font-size: 14px;
+		 }
+
+		 .clarence { 
+		   margin-top: 0px;
+		   margin-left: -100px;
+		   z-index: 10;
+		 } 
+
+		 .lightbox { display: none;
+			border:none;  
+			background-color: #000;
+			controls preload="none";
+			width: 320px;
+			height: 180px;
+		 }
+
+		 .home_vid_thumb_rollover {
+			display: inline-block;
+			background: url("images/video_thumbnail_320x180.jpg");
+			width: 320px;
+			height: 180px;
+		 }
+
+			 .chyron { 
+			   display: block;
+			   position: relative;
+		   height: 110px;
+		   width: 320px;	          
+			   margin-left: auto;
+			   margin-right: auto;
+			   margin-top: 60px;
+			   font-size: 10px;
+			   text-align: center;			
+			   color: #3574c1;			
+			   font-family: arial,helvetica;
+			 }
+			 
+			 #global-footer {
+				 margin-top: 630px;
+			 }
+
+
+		 @media only screen and (min-width: 860px) {
+
+			 .atlantis_home_logo {
+			   margin-top: 193px;
+			   width: 392px;
+			   height: 112px;
+			 }
+
+			 .search_box {
+			   width: 555px;
+			   height: 215px;
+			 }
+		 
+			.search_box table {
+				margin-left: 30px;
+			}
+			
+			.search_box table td {
+				height: 103px;
+			}
+
+			 .enter_text {
+			   margin-left: -160px;
+			   margin-bottom: -8px;
+			   padding-top: 43px;
+			   font-size: 18px;
+			 }	
+
+			 form input {
+			   font-size: 25px;
+		   width: 393px;
+		   height: 73px;
+		   padding: 0 19px;
+		   background: url(images/entry_field_bg.png) no-repeat;
+			 }
+
+			 form input#submit {
+		   width: 100px;
+		   height: 100px;
+		   background: url("images/go_btn.gif") no-repeat;
+			 }	
+
+			 form input#submit:hover { 
+		   background: url("images/go_btn_over.gif");
+			 }
+
+			 .privacy_text {
+			   font-size: 15px;
+			   color: #0faaef;
+			 }
+
+			 .rules_text {
+			   font-size: 15px;
+			   color: #0faaef;
+			 }
+
+			 .home_btn_table {
+			   margin-left: 0;
+			 }
+			 
+		 
+			.home_btn_table table td {
+				height: auto;
+			}
+
+			 .second_place_area {
+			   width: 572px;
+			 }
+
+			 .home_text {
+			   text-align: right;
+			   width: 400px;
+			   margin-bottom: 0px;
+			 }
+
+			 .home_text_btn {
+			   border-width: 0px;
+			   float: left;
+			 }
+
+			 .video_thumb {
+			   margin-top: 124px;
+			 }
+
+			 .lightbox { display: none;
+			   width: 854px;
+			   height: 480px;
+			 }
+
+			 .clarence { 
+			   margin-top: -750px;
+			   margin-left: -740px;
+			   z-index: 10;
+		 }                          
+
+			 .home_vid_thumb_rollover {
+			   background: url("images/video_thumbnail_392x220.jpg");
+			   width: 392px;
+			   height: 220px;
+			 }
+
+			 .home_vid_thumb_rollover:hover { 
+			   background: url("images/video_thumbnail_392x220_over.jpg");
+			 }  
+
+			 .chyron { 
+			   width: 995px;
+			   margin-top: 115px;
+			 }
+			 
+			 #global-footer {
+				 margin-top: 59px;
+			 }
+
+		 }
+
+
+	   </style>
+		<!--END VENDOR CSS -->
+		
+	</head>
+	<body>
+		<div class="hidden">
+			<script type="text/javascript">
 				<!--//--><![CDATA[//><!--
 
-					if (document.images) {
-						img1 = new Image();
-						img2 = new Image();
-						
-						img1.src = "images/go_btn_over.gif";
-						img2.src = "images/video_thumbnail_392x220_over.jpg";
-					}
+				if (document.images) {
+					img1 = new Image();
+					img2 = new Image();
+
+					img1.src = "images/go_btn_over.gif";
+					img2.src = "images/video_thumbnail_392x220_over.jpg";
+				}
 
 				//--><!]]>
-                                
-                                	function clearThis(target){
-                                            target.value= "";
-                                        }
+
+				function clearThis(target){
+						target.value= "";
+				}
 			</script>
-                    </div>
-    
-</head>
+		</div>
+		<!--#include virtual="/tools/universal-nav/universal_nav.html" -->
 
-
-
-
-
-<body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<div id="container">
+			<div id="background_pan">
     
     
-    
-<div class="container">
-    <div id="background_pan">
-    
-    
+				<div class="wrapper">
         
-    
-<div class="wrapper">
-        
-<header class="main_h">
+					<header class="main_h">
 
-    <div class="row">
-        
-        <a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
-        
+						<div class="row">
 
-        <div class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+							<a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
 
-        <nav>
-            <ul class="left2">
-                <li><a href="index.html">SWEEPS</a></li>
-                <li><a href="super_soakers.html">SUPER SOAKERS</a></li>
-                <li><a href="game.html">TARGET PRACTICE</a></li>               
-            </ul> 
-            <ul class="right2">                
-                <li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>      
-                <li class="ad_tag"><img src="images/AdTag.png" alt="ad tag" /></li>                      
-            </ul>
-        </nav>
 
-    </div> <!-- / row -->
- 
-</header>
-        
-        
-    
+							<div class="mobile-toggle">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 
+							<nav>
+								<ul class="left2">
+									<li><a href="index.html">SWEEPS</a></li>
+									<li><a href="super_soakers.html">SUPER SOAKERS</a></li>
+									<li><a href="game.html">TARGET PRACTICE</a></li>               
+								</ul> 
+								<ul class="right2">                
+									<li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>      
+									<li class="ad_tag"><img src="images/AdTag.png" alt="ad tag" /></li>                      
+								</ul>
+							</nav>
+
+						</div> <!-- / row -->
+
+					</header>
+     
     
-    
-    
-    
-    <div class="main">       
+				 <div class="main">       
               
-      <section class="page1">
+					 <section class="page1">
           
             
 
           
-        <div class="page_container">
+						<div class="page_container">
             
             
             
-            <img src="images/atlantis_home_logo.png" alt="One lucky kid will win a trip to Atlantis Paradise Island in the Bahamas" class="atlantis_home_logo">
+						<img src="images/atlantis_home_logo.png" alt="One lucky kid will win a trip to Atlantis Paradise Island in the Bahamas" class="atlantis_home_logo">
  
               
-              	<div class="search_box">
-            	<form method="post" id="formCartoonNetworkHasbroH2014" action="http://poll.turner.com/ViewsFlash/servlet/viewsflash" onsubmit="return onSubmitCartoonNetworkHasbroH2014()">  
+						<div class="search_box">
+						<form method="post" id="formCartoonNetworkAtlantis2016" action="http://poll.turner.com/ViewsFlash/servlet/viewsflash" onsubmit="return onSubmitCartoonNetworkAtlantis2016()">  
                     
-                    <div class="enter_text">ENTER FOR A CHANCE TO WIN:</div>
+							 <div class="enter_text">ENTER FOR A CHANCE TO WIN:</div>
                     
-		     <table border="0" cellspacing="0" cellpadding="0" align="center">
-                        <tr>                       	
-                            <td align="right"><input name="email_address" type="text" value="ENTER EMAIL HERE" onFocus="clearThis(this)" /></td>
-                            <td align="left"><input id="submit" type="submit" value="" /></td>                  
-                        </tr> 
-                     </table> 
+							<table border="0" cellspacing="0" cellpadding="0" align="center">
+								<tr>                       	
+									<td align="right"><input name="email_address" type="text" value="ENTER EMAIL HERE" onFocus="clearThis(this)" /></td>
+									<td align="left"><input id="submit" type="submit" value="" /></td>                  
+								 </tr> 
+							</table> 
                     
-                    <div class="home_btn_table">
-                     <table width="210" border="0" cellspacing="0" cellpadding="0" align="center">             
-                        <tr>
-                            <td width="150"><a href="http://www.cartoonnetwork.com/help/privacy.html" target="_blank" class="privacy_text">privacy policy</a></td>
-                            <td width="60"><a href="rules.html" target="_blank" class="rules_text">rules</a></td>                        
-                        </tr>
-		     </table>
-                    </div>
+						<div class="home_btn_table">
+						 <table width="210" border="0" cellspacing="0" cellpadding="0" align="center">             
+							<tr>
+								<td width="150"><a href="http://www.cartoonnetwork.com/help/privacy.html" target="_blank" class="privacy_text">privacy policy</a></td>
+								<td width="60"><a href="rules.html" target="_blank" class="rules_text">rules</a></td>                        
+							</tr>
+						</table>
+						</div>
                         
                     <input type="hidden" name="cmd" value="tally">
-					<input type="hidden" name="pollid" value="CartoonNetwork!HasbroH2014">
+					<input type="hidden" name="pollid" value="CartoonNetwork!Atlantis_2016">
 					<input type="hidden" name="vwf_showquestion" id="vwf_showquestion">
-					<input type="hidden" name="results" value="?http://www.cartoonnetwork.com/promos/201411_hasbroholiday/thanks.html">
+					<input type="hidden" name="results" value="?*?e=1">
 					<input type="hidden" name="pagenumber" value="0">
 					<input type="hidden" name="charset" value="UTF-8">
 					<input type="hidden" id="vwf_ShowAndHide_HiddenQuestions" name="vwf_ShowAndHide_HiddenQuestions" value="">                
@@ -563,7 +620,7 @@
                 <source src="videos/CN_Super_Soakers_Phase_1.mp4" type='video/mp4' />
                 <source src="videos/CN_Super_Soakers_Phase_1.webm" type='video/webm' /> 
               </video>
-  	  </div>
+			</div>
                 
             <div class="chyron">
 	    	NO PURCHASE NECESSARY TO ENTER OR WIN; A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. MANY WILL ENTER, FEW WILL WIN. ONLY ONE WILL WIN THE GRAND PRIZE.  “Cartoon Network Atlantis” Sweepstakes begins 10:00:01 A.M. EST March 21, 2016 and ends 11:59:59 P.M. EST April 17, 2016. Open only to legal residents of the 48 contiguous U.S. and D.C. who are 6-18. VOID WHERE PROHIBITED. Official rules, methods of entry, odds of winning and prize details at www.cartoonnetwork.com/win or send SASE to “Cartoon Network Atlantis” Sweepstakes Rules P.O. Box 9409, St. Louis, MO 63117-9409. Sponsor: The Cartoon Network, Inc. 1050 Techwood Drive, Atlanta, GA 30318.
@@ -588,20 +645,33 @@
         
         
         
- </div>
-    <div id="main">
-      
-    </div>
-</div>
-  
-<script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>    
-    
-<script src="js/nav.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+			</div>
+			<div id="main">
 
+			</div>
+		</div><!--end #container-->
+		
+		<!--#include virtual="/tools/universal-nav/footer.html" -->
+		
+		<!--VENDOR JS HERE-->
+		<script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>    
 
-        
-</body>
+		<script src="js/nav.js"></script>
+		<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+		<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+		<script src="js/cn_omniture.js"></script>
+		<script type="text/JavaScript" src="http://poll.turner.com/ViewsFlash/js/Standard_.js?jsversion=1458067836110" ></script>
+		<script src="js/cogix.js"></script>
+		
+		<script>
+		$(function(){
+			if( 'e=1' === window.location.search.replace("?", "") ) {
+				$('input#submit').remove();
+				$('input[name="email_address"]').attr({'value':'THANKS FOR ENTERING!!', 'style':'font-size: 16px;'});
+			}
+		});
+	  </script>
+		<!--END VENDOR JS -->
+	</body>
 </html>
