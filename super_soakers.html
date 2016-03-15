@@ -1,0 +1,501 @@
+<!doctype html>
+<html>
+<head>
+	<title>Atlantis Super Soakers</title>
+        
+        <meta charset="utf-8">
+	<meta name="description" content="" />
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        
+	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+        
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+        <link rel="stylesheet" href="css/nav_style.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+        <link rel="stylesheet" href="css/background_style_super_soaker.css">
+        
+  <style>
+      
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url('gotham_rounded_font/GothamRnd-Book.otf');
+    }
+    
+    html {
+      height: 1020px;
+    }
+    body {
+      padding: 0;
+      text-align: center;
+      font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
+      position: relative;
+      margin: 0;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    
+    h1, h2 {
+      float: left;
+    }
+    h1 {
+      margin-top: 100px;
+      color: #000;
+      margin-bottom: 5px;
+      font-size: 70px;
+      letter-spacing: -4px;
+      font-weight: 100;
+    }
+    h1 span {
+      font-size: 26px;
+      margin: 0 5px;
+      text-transform: capitalize;
+      background: rgba(0,0,0,0.85);
+      display: inline-block;
+      color: #6D461D;
+      border-radius: 5px 5px;
+      -webkit-border-radius: 5px 5px;
+      -moz-border-radius: 5px 5px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+      padding: 3px 10px;
+    }
+    h2 {
+
+    }
+    
+    .enter_text {
+      padding: 0 19px 0px;
+      font-size: 14px;
+    }
+    
+    form input {
+	color: #000000;
+	border: none;
+	font-size: 25px;
+	font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
+	width: 257px;
+	height: 48px;
+	background: url(images/entry_field_bg_small.png) no-repeat;
+        padding: 0 12px;
+    }
+    form input#submit {
+	border: none;
+	padding: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
+	width: 65px;
+	height: 65px;
+	overflow: hidden;
+	background: url("images/go_btn_over_small.png") no-repeat;
+	cursor: pointer;
+    }
+
+    form input#submit:hover { 
+	background: url("images/go_btn_small.png");
+    }
+
+    .privacy_text {
+        padding: 0 19px;
+        font-size: 15px;
+        color: #0faaef;
+    }
+
+    .rules_text {
+        font-size: 15px;
+        color: #0faaef;
+    }
+    
+    .pointer {
+        color: #9b59b6;
+        font-family: 'Pacifico', cursive;
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .main h1.demo1 {
+      background: #1ABC9C;
+    }
+    
+    
+    .btn {
+      width: 200px;
+      color: rgb(255, 255, 255);
+      border: 4px solid rgb(0, 0, 0);
+      background: rgba(3, 3, 3, 0.75);
+    }
+    .clear {
+      width: auto;
+    }
+    .btn:hover, .btn:hover {
+      background: #444;
+    }
+    .btns {
+      width: 320px;
+      margin: 50px auto;
+    }
+
+    .home_text {
+      text-align: right;
+      color: rgba(0,0,0,0.99);
+      padding: 6px;
+      opacity: 1;
+      clear: both;
+      width: 396px;
+      border-style: solid;
+      border-width: 0px;
+      float: left;
+    }
+    .home_text a {
+      color: rgba(0,0,0,0.99);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .home_text_btn {
+      border-style: solid;
+      border-width: 0px;
+      width: 158px;
+      float: left;
+    }
+    
+    .super_soaker_text_1 {
+      color: #ffffff;
+      margin-top: 124px;
+      margin-left: 0px;
+      font-size: 24px;
+      width: 320px;
+    }
+    
+    .super_soaker_logo {
+      border-style: solid;
+      border-width: 0px;
+      margin-top: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 180px;
+    }
+    
+    .super_soaker_text_2 {
+      color: #ffffff;
+      margin-top: 10px;
+      margin-left: 0px;
+      font-size: 24px;
+      width: 320px;
+    }
+    
+    .spinner_1 {
+      border-style: solid;
+      border-width: 0px;
+      margin-top: 85px;
+      margin-left: -85px;
+      width: 500px;
+    }
+    
+    .spinner_2 {
+      border-style: solid;
+      border-width: 0px;
+      margin-top: 30px;
+      margin-left: -85px;
+      width: 500px;
+    }
+    
+    header {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .main section .page_container {
+      position: relative;
+      top: 25%;
+      margin: 0 auto 0;
+      max-width: 320px;
+      border-style: solid;
+      border-width: 0px;
+    }
+    
+    .main section  {
+      overflow: hidden;
+    }
+    
+    .main section > img {
+      position: absolute;
+      max-width: 100%;
+    }
+   
+    .main section.page1 h1 strong {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 16px;
+      padding: 10px 10px;
+      display: inline-block;
+      line-height: 140%;
+      background: #FFF;
+      border-radius: 3px;
+      position: relative;
+      top: -13px;
+      
+    }
+    
+    .reel {
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 320px;
+      height: 192px;
+      z-index: 1;
+    }
+  
+    .super_soaker_details_tornado_scream {       
+      width: 298px;
+      height: 75px;  
+    }
+    
+    .super_soaker_details_squall_surge {       
+      width: 286px;
+      height: 75px;  
+    }
+    
+    .drag_to_rotate {
+      position: absolute;
+      margin-top: -1073px;
+      margin-left: 123px;
+     }
+     
+    .uncle_grandpa { 
+      margin-top: -10px;
+      margin-left: -615px;
+    }
+
+    .footer { 
+      display: block;
+      position: relative;
+      height: 30px;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -100px;
+      font-size: 10px;
+      text-align: center;			
+      color: #0faaef;			
+      font-family: arial,helvetica;
+    }     
+    
+    @media only screen and (min-width: 860px) {
+        
+       .main section .page_container {       
+          max-width: 950px;
+        }
+        
+        .super_soaker_text_1 {
+          margin-left: 60px;
+          font-size: 32px;
+          margin-top: 164px;
+        }
+        
+        .super_soaker_logo {;
+          margin-top: -68px;
+        }
+        
+        .super_soaker_text_2 {
+          margin-top: -72px;
+          margin-left: 580px;
+          font-size: 32px;
+        }
+        
+        .spinner_1 {
+          border-style: solid;
+          border-width: 0px;
+          margin-top: 65px;
+          margin-left: -40px;
+          width: 500px;
+        }
+    
+        .spinner_2 {
+          border-style: solid;
+          border-width: 0px;
+          margin-top: -393px;
+          margin-left: 491px;
+          width: 500px;
+        }
+        
+        .super_soaker_details_tornado_scream {       
+          width: 342px;
+          height: 86px;  
+        }
+    
+        .super_soaker_details_squall_surge {       
+          width: 328px;
+          height: 86px;  
+        }
+        
+        .footer { 
+  	  height: 30px;
+  	  width: 995px;
+          margin-top: 15px;
+	}                    
+                
+        .uncle_grandpa { 
+           margin-top: -145px;
+           margin-left: -500px;
+        }
+              
+        .reel {
+           display: block;
+           position: relative;
+           margin-left: auto;
+           margin-right: auto;
+           width: 500px;
+           height: 300px;
+           z-index: 1;
+        }
+                
+        .drag_to_rotate {
+           position: absolute;
+           margin-top: -780px;
+           margin-left: 431px;
+        }
+                
+             
+    }
+    
+    
+  </style>
+    
+    
+    
+</head>
+
+
+
+
+
+<body>
+    
+<div class="container">
+    <div id="background_pan">    
+    
+<div class="wrapper">
+        
+<header class="main_h">
+
+    <div class="row">
+        <a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav>
+            <ul class="left2">
+                <li><a href="index.html">SWEEPS</a></li>
+                <li><a href="super_soakers.html">SUPER SOAKERS</a></li>
+                <li><a href="game.html">TARGET PRACTICE</a></li>
+            </ul> 
+            <ul class="right2">
+                <li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>
+                <li class="ad_tag"><img src="images/AdTag.png" alt="ad tag" /></li>
+            </ul>
+        </nav>
+
+    </div> <!-- / row -->
+ 
+</header>
+        
+        
+    <div class="main">       
+              
+      <section class="page1">
+          
+            
+
+          
+        <div class="page_container">
+            
+            <div class="super_soaker_text_1">CHECK OUT THE</div>
+
+            <a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank"><img src="images/super_soaker_logo.png" alt="Nerf Super Soaker" class="super_soaker_logo"></a>
+            
+            <div class="super_soaker_text_2">WATER BLASTERS</div>
+              
+            
+              	<div class="spinner_1">           	
+                    <img src="images/spinner_flash_flood000.png" 
+                    alt="Super Soaker Flash Flood"
+                    class="reel"
+                    data-images="images/spinner_flash_flood###.png|00..17">
+                    <img src="images/super_soaker_details_squall_surge.png" alt="H2Ops Squall Surge" class="super_soaker_details_squall_surge"/>                  
+                </div><!-- spinner_1 close -->
+                 
+                
+                <div class="spinner_2">               
+                    <img src="images/spinner_flip_fury000.png" 
+                    alt="Flipfury"
+                    class="reel"
+                    data-images="images/spinner_flip_fury###.png|00..17"> 
+                    <img src="images/super_soaker_details_tornado_scream.png" alt="H2Ops Squall Surge" class="super_soaker_details_tornado_scream"/>
+        	</div><!-- spinner_2 close -->
+                
+                
+               <div class="uncle_grandpa">
+                  <img src="images/uncle_grandpa_splashed.png" alt="Uncle Grandpa getting blasted">
+               </div>
+                
+               <div class="footer">
+	    	  © 2016 Hasbro. All Rights Reserved.
+               </div>
+                
+               <div class="drag_to_rotate">
+                  <img src="images/drag_to_rotate.png" alt="Drag to Rotate"/>
+               </div>
+                
+  	    </div>
+          
+            
+
+      </section>
+	    
+	 
+	    
+
+      
+    </div>
+  </div>
+    
+ 
+        
+</div>
+    <div id="main">
+      
+    </div>
+</div>
+        
+        
+        
+<script src="js/nav.js"></script>
+
+<script src="js/jquery.reel.js"></script>
+  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+
+        
+</body>
+</html>

@@ -1,49 +1,53 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Atlantis</title>
-	<meta name="title" content="" />
+	<title>Atlantis Home</title>
+        
+        <meta charset="utf-8">
 	<meta name="description" content="" />
-	<link rel="image_src" href="/images/onepage_scroll_image.png" />
-  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        
 	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
-
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
         
-  <script type="text/javascript" src="js/onepagescroll.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
-  <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/nav_style.css">
+   <link rel="stylesheet" href="css/nav_style.css">
 
+  
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+   <link rel="stylesheet" href="css/background_style.css">
+   
+   <link href="css/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+  
+  
   <style>
       
     @font-face {
       font-family: Gotham Rounded;
       src: url('gotham_rounded_font/GothamRnd-Book.otf');
     }
-      
+    
     html {
-      height: 100%;
+      height: 1020px;
     }
     body {
-      background: #d6daf0;
+      background: #ffffff;
+      //background-image: url("images/bg_atlantis.jpg");
+      //-webkit-background-size: cover;
+      //-moz-background-size: cover;
+      //-o-background-size: cover;
+      //background-size: cover; 
+      //background-size: 100% 100%;
       padding: 0;
       text-align: center;
-      font-family: 'open sans';
+      font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
       position: relative;
       margin: 0;
-      height: 100%;
+      //height: 100%;
       -webkit-font-smoothing: antialiased;
-    }
-    
-    .wrapper {
-    	height: 100% !important;
-    	height: 100%;
-    	margin: 0 auto; 
-    	overflow: hidden;
     }
     
     a {
@@ -52,7 +56,6 @@
     
     
     h1, h2 {
-      width: 100%;
       float: left;
     }
     h1 {
@@ -77,10 +80,45 @@
       padding: 3px 10px;
     }
     h2 {
-      color: #6D461D;
-      font-weight: 100;
-      margin-top: 0;
-      margin-bottom: 10px;
+
+    }
+    
+    .enter_text {
+      margin-left: -70px;
+      margin-bottom: -8px;
+      font-size: 14px;
+      padding-top: 13px;
+    }
+    
+    form input {
+	color: #000000;
+	border: none;
+	font-size: 20px;
+	font-family: "Gotham Rounded", Helvetica, Roboto, Arial, sans-serif;
+	width: 247px;
+	height: 46px;
+	background: url(images/entry_field_bg_small.png) no-repeat;
+        padding: 10px 12px;
+    }
+    form input#submit {
+	border: none;
+	padding: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
+	width: 65px;
+	height: 65px;
+	overflow: hidden;
+	background: url("images/go_btn_over_small.png") no-repeat;
+	cursor: pointer;
+    }
+
+    .privacy_text {
+        font-size: 11px;
+        color: #0faaef;
+    }
+
+    .rules_text {
+        font-size: 11px;
+        color: #0faaef;
     }
     
     .pointer {
@@ -89,148 +127,76 @@
       font-size: 30px;
       margin-top: 15px;
     }
-    code {
-      margin: 20px 1%;
-      float: left;
-      width: 48%;
-      height: 105px;
-      background: rgba(0,0,0,0.1);
-      border: rgba(0,0,0,0.05) 5px solid;
-      border-radius: 5px;
-      padding:5px;
-      color: white;
-      text-align: center;
-      font-size: 15px;
-      margin-top: 25px;
-      display: block;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-    }
-    code.html {
-      color: #7EC9E6;
-    }
-    code.js {
-      color: #FFAD00;
-    }
 
     .main {
       float: left;
       width: 100%;
       margin: 0 auto;
     }
-    
-    .main h1 {
-      padding:150px 50px;
-      float: left;
-      width: 100%;
-      font-size: 45px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      font-weight: 100;
-      color: white;
-      margin: 0;
-    }
-   
+
     .main h1.demo1 {
       background: #1ABC9C;
     }
-    
-    .reload.bell {
-      font-size: 12px;
-      padding: 20px;
-      width: 45px;
-      text-align: center;
-      height: 47px;
-      border-radius: 50px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-    }
-    
-    .reload.bell #notification {
-      font-size: 25px;
-      line-height: 140%;
-    }
-    
-    .reload, .btn{
-      display: inline-block;
-      border: 4px solid #A2261E;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      background: #CC3126;
-      display: inline-block;
-      line-height: 100%;
-      padding: 0.7em;
-      text-decoration: none;
-      color: #fff;
-      width: 100px;
-      line-height: 140%;
-      font-size: 17px;
-      font-family: open sans;
-      font-weight: bold;
-    }
-    .reload:hover{
-      background: #444;
-    }
+      
     .btn {
       width: 200px;
       color: rgb(255, 255, 255);
       border: 4px solid rgb(0, 0, 0);
       background: rgba(3, 3, 3, 0.75);
     }
+    
     .clear {
       width: auto;
     }
+    
     .btn:hover, .btn:hover {
       background: #444;
     }
+    
     .btns {
-      width: 410px;
+      width: 320px;
       margin: 50px auto;
     }
-    .credit {
-      text-align: center;
-      color: rgba(0,0,0,0.5);
-      padding: 10px;
-      width: 410px;
-      font-style: italic;
-      opacity: 0.7;
-      clear: both;
-      margin-top: 45px;
-      float: left;
-    }
-    .credit a {
-      color: rgba(0,0,0,0.85);
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
+    
+    .second_place_area {
+      margin-top: 37px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 320px;
+      border-style: solid;
+      border-width: 0px;
+      border-color: yellow;
+      display: block;
+      position: relative;
     }
     
-    .back {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .home_text {
       text-align: center;
-      display: block;
-      padding: 7px;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.25);
-      font-weight: bold;
-      font-size: 13px;
-      color: #000;
-      -webkit-transition: all 500ms ease-in-out;
-      -moz-transition: all 500ms ease-in-out;
-      -o-transition: all 500ms ease-in-out;
-      transition: all 500ms ease-in-out;
+      color: rgba(0,0,0,0.99);
+      padding: 6px;
+      opacity: 1;
+      clear: both;
+      width: 320px;
+      border-style: solid;
+      border-width: 0px;
+      float: left;
+      margin-bottom: 15px;
     }
-    .back:hover {
-      color: black;
-      background: rgba(255, 255, 255, 0.5);
+    
+    .home_text a {
+      color: rgba(0,0,0,0.99);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .home_text_btn {
+      border-style: solid;
+      border-width: 0px;
+      width: 160px;
+      float: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     header {
@@ -242,7 +208,6 @@
       top: 25%;
       margin: 0 auto 0;
       max-width: 950px;
-      z-index: 3;
     }
     .main section  {
       overflow: hidden;
@@ -251,245 +216,54 @@
     .main section > img {
       position: absolute;
       max-width: 100%;
-      z-index: 1;
     }
     
-
+    .main section.page1 {
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; 
+      background-size: 100% 100%;
+      
+    }
     
-    
-    
-    
-    
-figure {
-  position: absolute;
-  top: -20px;
-  left: -40px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  /*animation*/
-  
-  animation: slideShow 24s linear infinite 0s;
-  -o-animation: slideShow 24s linear infinite 0s;
-  -moz-animation: slideShow 24s linear infinite 0s;
-  -webkit-animation: slideShow 24s linear infinite 0s;
-}
-
-figurecaption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-}
-
-.pic-1 {
-  opacity: 1;
-  background: url(images/bg_atlantis.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-
-/* keyframes*/
-
-@keyframes 
-slideShow {  0% {
- opacity: 0;
- transform:scale(1);
- -ms-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- transform:scale(1.1);
- -ms-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- transform:scale(1);
- -ms-transformm:scale(1);
-}
-}
- @-o-keyframes 
-slideShow {  0% {
- opacity: 0;
- -o-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -o-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -o-transformm:scale(1);
-}
-}
- @-moz-keyframes 
-slideShow {  0% {
- opacity: 0;
- -moz-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -moz-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -moz-transformm:scale(1);
-}
-}
- @-webkit-keyframes 
-slideShow {  0% {
- opacity: 0;
- -webkit-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -webkit-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -webkit-transformm:scale(1);
-}
-} 
-    
-    
-    
-    
-    
-    
-    
-    .main section.page1 h1 {
-      float: none;
-      width: 435px;
+    .atlantis_home_logo {
       display: block;
-      text-align: center;
       padding: 0;
-      margin-bottom: 15px;
-      font-size: 44px;
-      color: black;
-    }
-    .main section.page1 h2 {
-      font-size: 18px;
-      display: block;
-      color: rgba(0,0,0,0.85);
-      text-align: center;
-      width: 435px;
-      line-height: 160%;
-    }
-    .main section .page_container .btns {
-      clear: both;
-      float: left;
-      text-align: center;
-      width: 435px;
-    }
-    .main section .page_container .btns a{
-      text-align: center;
-    }
-    .main section.page2 {
-      background: #555557 url(back-phone.png) no-repeat center -150px ;
-    }
-    .main section.page2 > img {
-      position: absolute;
-      top: -300px;
-      left: 50%;
-      margin-left: -1095px;
-    }
-    .main section.page2 .page_container {
-      margin-top: 240px;
-      overflow: hidden;
-    }
-    .main section.page2 h1 {
-      text-align: center;
-      padding: 0;
-      margin-bottom: 15px;
-      font-size: 50px;
-      letter-spacing: -1px;
-      color: white;
-    }
-    .main section.page2 h2 {
-      color: rgba(255,255,255,0.85);
-      text-align: center;
-      line-height: 160%;
-      font-weight: 100;
-    }
-    .viewing-page-2 .back{
-      background: rgba(0, 0, 0, 0.25);
-      color: #FFF;
-      }
-    
-    body.disabled-onepage-scroll .onepage-wrapper  section {
-      min-height: 100%;
-      height: auto;
-    }
-    
-    body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
-      padding: 20px;
-      margin-top: 150px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    
-    body.disabled-onepage-scroll  section .page_container h1{
-      text-align: center;
-      font-size: 50px;
-      width: 100%;
-    }
-    body.disabled-onepage-scroll section .page_container h2, body.disabled-onepage-scroll section .page_container .credit, body.disabled-onepage-scroll section .page_container .btns{
-      text-align: center;
-      width: 100%;
-    }
-    
-    body.disabled-onepage-scroll .main section.page1 > img {
-      position: absolute;
-      width: 80%;
-      left: 10%;
-    }
-    
-    body.disabled-onepage-scroll .main section > img {
-      position: relative;
-      max-width: 80%;
-      bottom: 0;
-    }
-    body.disabled-onepage-scroll code {
-      width: 95%;
-      margin: 0 auto 25px;
-      float: none;
-      overflow: hidden;
-    }
-    
-    body.disabled-onepage-scroll .main section.page3 .page_container {
-      width: 90%;
+      margin-top: 127px;
       margin-left: auto;
       margin-right: auto;
-      right: 0;
+      height: 91px;
+      width: 320px;	
     }
+    
+    .search_box {
+      color: rgba(0,0,0,0.85);
+      width: 320px;
+      height: 123px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 43px;
+      background-color: #ffffff;
+      z-index: 12;
+      display: block;
+      position: relative;
+    }
+    
+    .home_btn_table {
+      margin-left: -160px;
+    }
+    
+    .video_thumb {
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 12;
+    }
+  
     .main section.page1 h1 strong {
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -516,31 +290,190 @@ slideShow {  0% {
       letter-spacing: 1px;
       font-size: 14px;
     }
-	</style>
+    
+    .clarence { 
+      margin-top: 0px;
+      margin-left: -100px;
+      z-index: 10;
+    } 
+    
+    .lightbox { display: none;
+       border:none;  
+       background-color: #000;
+       controls preload="none";
+       width: 320px;
+       height: 180px;
+    }
+    
+    .home_vid_thumb_rollover {
+       display: inline-block;
+       background: url("images/video_thumbnail_320x180.jpg");
+       width: 320px;
+       height: 180px;
+    }
+ 
+        .chyron { 
+          display: block;
+          position: relative;
+  	  height: 110px;
+  	  width: 320px;	          
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 60px;
+          font-size: 10px;
+          text-align: center;			
+          color: #3574c1;			
+          font-family: arial,helvetica;
+        }
+
         
-    <script>
-    function view_page_two(window) {  	      
-        _addClass(document.querySelector(settings.sectionContainer + "[data-index='2']"), "active");
-  	  _addClass(body, "viewing-page-2");
-  		if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a[data-index='2']"), "active");
-        }        
-    </script>
+    @media only screen and (min-width: 860px) {
+       
+        .atlantis_home_logo {
+          margin-top: 193px;
+          width: 392px;
+          height: 112px;
+        }
+        
+        .search_box {
+          width: 555px;
+          height: 215px;
+        }
+        
+    	.enter_text {
+          margin-left: -160px;
+          margin-bottom: -8px;
+          padding-top: 43px;
+          font-size: 18px;
+        }	
+        
+        form input {
+          font-size: 25px;
+	  width: 393px;
+	  height: 73px;
+	  padding: 0 19px;
+	  background: url(images/entry_field_bg.png) no-repeat;
+        }
+
+        form input#submit {
+	  width: 100px;
+	  height: 100px;
+	  background: url("images/go_btn.gif") no-repeat;
+        }	
+
+        form input#submit:hover { 
+	  background: url("images/go_btn_over.gif");
+        }
+
+        .privacy_text {
+          font-size: 15px;
+          color: #0faaef;
+        }
+
+        .rules_text {
+          font-size: 15px;
+          color: #0faaef;
+        }
+        
+        .home_btn_table {
+          margin-left: -290px;
+        }
+        
+        .second_place_area {
+          width: 572px;
+        }
+        
+        .home_text {
+          text-align: right;
+          width: 400px;
+          margin-bottom: 0px;
+        }
+        
+        .home_text_btn {
+          border-width: 0px;
+          float: left;
+        }
+        
+        .video_thumb {
+          margin-top: 124px;
+        }
+        
+        .lightbox { display: none;
+          width: 854px;
+          height: 480px;
+        }
+        
+        .clarence { 
+          margin-top: -750px;
+          margin-left: -740px;
+          z-index: 10;
+	}                          
+
+        .home_vid_thumb_rollover {
+          background: url("images/video_thumbnail_392x220.jpg");
+          width: 392px;
+          height: 220px;
+        }
+
+        .home_vid_thumb_rollover:hover { 
+          background: url("images/video_thumbnail_392x220_over.jpg");
+        }  
+        
+        .chyron { 
+          width: 995px;
+          margin-top: 115px;
+        }
+                     
+    }
+    
+    
+  </style>
+    
+    
+                    <div class="hidden">
+                        <script type="text/javascript">
+				<!--//--><![CDATA[//><!--
+
+					if (document.images) {
+						img1 = new Image();
+						img2 = new Image();
+						
+						img1.src = "images/go_btn_over.gif";
+						img2.src = "images/video_thumbnail_392x220_over.jpg";
+					}
+
+				//--><!]]>
+                                
+                                	function clearThis(target){
+                                            target.value= "";
+                                        }
+			</script>
+                    </div>
     
 </head>
+
+
+
+
+
 <body>
     
     
     
- 
+<div class="container">
+    <div id="background_pan">
     
     
+        
     
-    <div class="wrapper">
+<div class="wrapper">
         
 <header class="main_h">
 
     <div class="row">
-        <a class="logo" href="#"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
+        
+        <a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
+        
 
         <div class="mobile-toggle">
             <span></span>
@@ -549,75 +482,125 @@ slideShow {  0% {
         </div>
 
         <nav>
-            <ul>
+            <ul class="left2">
                 <li><a href="index.html">SWEEPS</a></li>
-                <li><a href="#" onclick="go(el3);">SUPER SOAKERS</a></li>
-                
-                
-                <li><a href="game.html">TARGET PRACTICE</a></li>
+                <li><a href="super_soakers.html">SUPER SOAKERS</a></li>
+                <li><a href="game.html">TARGET PRACTICE</a></li>               
+            </ul> 
+            <ul class="right2">                
+                <li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>      
+                <li class="ad_tag"><img src="images/AdTag.png" alt="ad tag" /></li>                      
             </ul>
         </nav>
 
     </div> <!-- / row -->
-
-    
-    
+ 
 </header>
         
-	  <div class="main">
-	   
+        
+    
 
+    
+    
+    
+    
+    <div class="main">       
               
-              
-      <section class="page1" id="sweeps">
+      <section class="page1">
           
-            <figure class="pic-1"></figure>
+            
 
           
         <div class="page_container">
-          <h1><strong>Pure JS</strong> One Page Scroll v1.2</h1>
-          <h2>Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin. (<strong>No jQuery Required</strong>)</h2>
-          <p class="credit">Created by <a href="http://www.thepetedesign.com">Pete R.</a>, Founder of <a href="http://www.Travelistly.com" target="_blank">Travelistly</a> &amp; <a href="http://www.bucketlistly.com" target="_blank">BucketListly</a></p>
-          <div class="btns">
             
-  	        <a class="reload btn" href="https://github.com/peachananr/purejs-onepage-scroll">Download on Github</a>
-  	        <a class="text-btn" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html">Looking for a jQuery version?</a>
-  	      </div>
-  	    </div>
-  	    <img src="phones.png" alt="phones">
+            
+            
+            <img src="images/atlantis_home_logo.png" alt="One lucky kid will win a trip to Atlantis Paradise Island in the Bahamas" class="atlantis_home_logo">
+ 
+              
+              	<div class="search_box">
+            	<form method="post" id="formCartoonNetworkHasbroH2014" action="http://poll.turner.com/ViewsFlash/servlet/viewsflash" onsubmit="return onSubmitCartoonNetworkHasbroH2014()">  
+                    
+                    <div class="enter_text">ENTER FOR A CHANCE TO WIN:</div>
+                    
+		     <table border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>                       	
+                            <td align="right"><input name="email_address" type="text" value="ENTER EMAIL HERE" onFocus="clearThis(this)" /></td>
+                            <td align="left"><input id="submit" type="submit" value="" /></td>                  
+                        </tr> 
+                     </table> 
+                    
+                    <div class="home_btn_table">
+                     <table width="210" border="0" cellspacing="0" cellpadding="0" align="center">             
+                        <tr>
+                            <td width="150"><a href="http://www.cartoonnetwork.com/help/privacy.html" target="_blank" class="privacy_text">privacy policy</a></td>
+                            <td width="60"><a href="rules.html" target="_blank" class="rules_text">rules</a></td>                        
+                        </tr>
+		     </table>
+                    </div>
+                        
+                    <input type="hidden" name="cmd" value="tally">
+					<input type="hidden" name="pollid" value="CartoonNetwork!HasbroH2014">
+					<input type="hidden" name="vwf_showquestion" id="vwf_showquestion">
+					<input type="hidden" name="results" value="?http://www.cartoonnetwork.com/promos/201411_hasbroholiday/thanks.html">
+					<input type="hidden" name="pagenumber" value="0">
+					<input type="hidden" name="charset" value="UTF-8">
+					<input type="hidden" id="vwf_ShowAndHide_HiddenQuestions" name="vwf_ShowAndHide_HiddenQuestions" value="">                
+				</form>  
+      
+        	</div><!-- search_box close -->
+         
+         <div class="second_place_area">
+            <div class="home_text">100 2ND PLACE WINNERS WIN SUPERSOAKER<br><a href="super_soakers.html">TORNADO SCREAM WATER BLASTER</a></div>
+            <div class="home_text_btn"><a href="super_soakers.html"><img src="images/super_soaker_btn_home.png" alt="Check It Out Super Soakers"></a></div>
+         </div><!-- second_place_area close -->   
+         
+         
+          <div class="video_thumb">
+              <a href="#" data-featherlight="#fl3"><div class="home_vid_thumb_rollover"></div></a>
+              
+              <video controls class="lightbox" id="fl3" webkitallowfullscreen mozallowfullscreen allowfullscreen onplaying="videoPlay('homepage video');" onended="videoComplete('homepage video');">
+                <source src="videos/CN_Super_Soakers_Phase_1.mp4" type='video/mp4' />
+                <source src="videos/CN_Super_Soakers_Phase_1.webm" type='video/webm' /> 
+              </video>
+  	  </div>
+                
+            <div class="chyron">
+	    	NO PURCHASE NECESSARY TO ENTER OR WIN; A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. MANY WILL ENTER, FEW WILL WIN. ONLY ONE WILL WIN THE GRAND PRIZE.  “Cartoon Network Atlantis” Sweepstakes begins 10:00:01 A.M. EST March 21, 2016 and ends 11:59:59 P.M. EST April 17, 2016. Open only to legal residents of the 48 contiguous U.S. and D.C. who are 6-18. VOID WHERE PROHIBITED. Official rules, methods of entry, odds of winning and prize details at www.cartoonnetwork.com/win or send SASE to “Cartoon Network Atlantis” Sweepstakes Rules P.O. Box 9409, St. Louis, MO 63117-9409. Sponsor: The Cartoon Network, Inc. 1050 Techwood Drive, Atlanta, GA 30318.
+            </div>
+                       
+            <div class="clarence">
+                <img src="images/clarence_spashed.png" alt="Clarence getting blasted">
+            </div>
+                
+         
+  	    </div><!-- page_container close -->
+          
+
       </section>
 	    
-	    <section class="page2" id="super_soakers">
-	      <div class="page_container">
-          <h1>Ready-to-use plugin</h1>
-          <h2>All you need is an HTML markup, call the script and BAM!</h2>
-          <code class="html">
-  	        &lt;div class="main"&gt;<br>
-  	          &lt;section&gt;...&lt;/section&gt;<br>
-  	          &lt;section&gt;...&lt;/section&gt;<br>
-  	          ...<br>
-  	        &lt;/div&gt;
-  	      </code>
-  	      <code class="js">
-	          onePageScroll(".main");
-	        </code>
-	      </div>
-      </section>
-	    
+    
 
       
     </div>
   </div>
-  <script>
-	 onePageScroll(".main", {
-     sectionContainer: "section",
-     loop: true,
-     responsiveFallback: false
-   });
-		
-  </script>
+    
         
-  <script src="js/nav.js"></script>
+        
+        
+ </div>
+    <div id="main">
+      
+    </div>
+</div>
+  
+<script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>    
+    
+<script src="js/nav.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='http://webdesignerwall.com/demo/animating-bg-colors/js/animated_bg.js'></script>
+
 
         
 </body>
