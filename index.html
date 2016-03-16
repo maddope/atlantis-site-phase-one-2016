@@ -112,6 +112,19 @@
 		 h2 {
 
 		 }
+		 
+		 div#ad_wrapper {
+			text-align: center;
+			padding: 12px 0;
+			background-color: #000;
+		}
+
+		div#ad_bnr_atf_01 {
+			display: inline-block;
+			border: 1px solid #000!important;
+			padding-right: 15px!important;
+			background: url('/static/images/global/ad-tag-large.png') no-repeat center right #000;
+		}
 
 		 .enter_text {
 		   margin-left: -70px;
@@ -525,6 +538,10 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		
+		<div id="ad_wrapper">
+			<div id="ad_bnr_atf_01"></div>	
+		</div>
+		
 		<div id="container">
 			<div id="background_pan">
     
@@ -665,13 +682,17 @@
 		<script src="js/cogix.js"></script>
 		
 		<script>
-		$(function(){
-			if( 'e=1' === window.location.search.replace("?", "") ) {
-				$('input#submit').remove();
-				$('input[name="email_address"]').attr({'value':'THANKS FOR ENTERING!!', 'style':'font-size: 16px;'});
-			}
-		});
-	  </script>
+			$(function(){
+				if( 'e=1' === window.location.search.replace("?", "") ) {
+					$('input#submit').remove();
+					$('input[name="email_address"]').attr({'value':'THANKS FOR ENTERING!!', 'style':'font-size: 16px;'});
+				}
+			});
+	    </script>
+	  
+	  
+		<script src="http://i.cdn.turner.com/ads/toon/adfuel.js"></script>
+		<script src="http://i.cdn.turner.com/ads/toon/cn_promopages_hasbroatlantis.js"></script>
 		<!--END VENDOR JS -->
 	</body>
 </html>
