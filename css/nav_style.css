@@ -1,7 +1,7 @@
 .main_h {
-  position: fixed;
+  position: relative;
   top: 0px;
-  max-height: 80px;
+  height: 80px;
   z-index: 999;
   width: 100%;
   padding-top: 0px;
@@ -24,16 +24,23 @@
 }
 
 
-    
-
-@media only screen and (max-width: 860px) {
-
-}
-
-
 .open-nav {
-  max-height: 400px !important;
+  height: 400px !important;
 }
+
+@media only screen and (min-width: 640px) {
+	.open-nav {
+		height: 255px !important;
+	}
+}
+
+@media only screen and (min-width: 860px) {
+	.open-nav {
+		height: 355px !important;
+	}
+}
+
+
 .open-nav .mobile-toggle {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
