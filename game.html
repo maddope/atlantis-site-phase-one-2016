@@ -31,7 +31,7 @@
 <header class="main_h">
 
     <div class="row">
-        <a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis"></a>
+        <a class="logo_in_nav" href="index.html"><img src="images/cn_logo_for_nav.png" alt="CN at Atlantis" onclick="promoClick('target practice page : nav : cn-atlantis logo clicked');"></a>
 
         <div class="mobile-toggle">
             <span></span>
@@ -41,12 +41,12 @@
 
         <nav>
             <ul class="left2">
-                <li><a href="index.html">SWEEPS</a></li>
-                <li><a href="super_soakers.html">SUPER SOAKERS</a></li>
-                <li><a href="game.html">TARGET PRACTICE</a></li>
+                <li><a href="index.html" onclick="promoClick('target practice page : nav : sweeps clicked');">SWEEPS</a></li>
+                <li><a href="super_soakers.html" onclick="promoClick('target practice page : nav : super soakers clicked');">SUPER SOAKERS</a></li>
+                <li><a href="game.html" onclick="promoClick('target practice page : nav : target practice clicked');">TARGET PRACTICE</a></li>
             </ul> 
             <ul class="right2">
-                <li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>
+                <li><a href="http://www.cartoonnetwork.com/redirects/third/index_exclude.html?http://www.hasbro.com" target="_blank" class="hasbro_logo_in_nav" onclick="promoClick('target practice page : nav : hasbro logo clicked');"><img src="images/hasbro_logo_for_nav.png" alt="Hasbro logo"></a></li>
                 <li class="ad_tag"><img src="images/AdTag.png" alt="ad tag" /></li>
             </ul>
         </nav>
@@ -235,6 +235,7 @@
 		    things[i].setHit();
 
 		    hits++;
+			promoClick('target practice page : character hit');
 
 		}
 	     }
@@ -404,6 +405,7 @@
 
 	    explosions.push(new Explosion(targetX, targetY, new Audio('game/splat.wav')));
 	    shots++;
+		promoClick('target practice page : shot fired');
 	}
 	
 	// resize the canvas to fill browser window dynamically
@@ -419,7 +421,10 @@
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+<script src="js/cn_omniture.js"></script>
 <script src="js/nav.js"></script>
+<script type="text/javascript" src="http://i.cdn.turner.com/analytics/cartoon/jsmd-prod.js"></script>
+<script type="text/javascript" src="http://i.cdn.turner.com/analytics/cartoon/jsmd.adbpsupplement.js"></script>
 
     
 </body>

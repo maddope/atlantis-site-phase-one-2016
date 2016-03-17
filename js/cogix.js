@@ -21,7 +21,7 @@ i18nArray['checkvalidemailmsg7'] = "E-mail domain name can't end with a period."
 
 
 function onSubmitCartoonNetworkAtlantis2016() {
-	promoClick('sweeps submit button clicked');
+	promoClick('sweeps page : sweeps submit button clicked');
     return vwfOnSubmit();
     }
 
