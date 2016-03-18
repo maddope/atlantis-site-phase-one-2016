@@ -116,12 +116,11 @@
 			background-color: #000;
 		}
 
-		div#ad_wrapper img {
+		div#ad_wrapper > div {
 			display: inline-block;
 			border: 1px solid #000!important;
 			padding-right: 15px!important;
 			background: url('/static/images/global/ad-tag-large.png') no-repeat center right #000;
-			width: 300px;
 		}
 
 		 .enter_text {
@@ -383,18 +382,10 @@
 			 #global-footer {
 				 margin-top: 630px;
 			 }
-			 
-			 
-			 @media only screen and (min-width: 640px) {
-				 div#ad_wrapper img {
-					 width: 700px;
-				 }
-			 }
+
 
 		 @media only screen and (min-width: 860px) {
-			div#ad_wrapper img {
-					 width: auto;
-				 }
+
 			 .atlantis_home_logo {
 			   margin-top: 96px;
 			   width: 392px;
@@ -541,7 +532,8 @@
         <![endif]-->
 		
 		<div id="ad_wrapper">
-			<img src="images/hasbro_atlantis_phase1_970x90_no_cta.jpg" alt="Hasbro Atlantis">
+			<div id="ad_bnr_atf_01"></div>
+			<!--<img src="images/hasbro_atlantis_phase1_970x90_no_cta.jpg" alt="Hasbro Atlantis">-->
 		</div>
 		
 		<div id="container">
