@@ -114,6 +114,7 @@
 			border: 1px solid #000!important;
 			padding-right: 15px!important;
 			background: url('/static/images/global/ad-tag-large.png') no-repeat center right #000;
+			width: 300px;
 		}
     .enter_text {
       padding: 0 19px 0px;
@@ -343,7 +344,16 @@
 	
 	
     
-    @media only screen and (min-width: 860px) {
+   @media only screen and (min-width: 640px) {
+				 div#ad_wrapper img {
+					 width: 700px;
+				 }
+			 }
+
+		 @media only screen and (min-width: 860px) {
+			div#ad_wrapper img {
+					 width: auto;
+				 }
         
        .main section .page_container {       
           max-width: 950px;
