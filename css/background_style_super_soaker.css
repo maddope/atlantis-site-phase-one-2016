@@ -64,7 +64,6 @@
 }
 #container {
   //background-color: #abebfe;
-  z-index: 101;
   position: relative;
   top: 0;
   text-align: Center;

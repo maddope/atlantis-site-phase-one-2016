@@ -326,10 +326,11 @@
 
     .footer { 
       display: block;
-      position: relative;
+      position: absolute;
       height: 30px;
       width: 320px;
-      margin-left: auto;
+	  left: 50%;
+      margin-left: -160px;
       margin-right: auto;
       margin-top: -100px;
       font-size: 10px;
@@ -395,10 +396,13 @@
   	  height: 30px;
   	  width: 995px;
           margin-top: 15px;
+		  z-index: 102;
+      margin-left: -497px;
+		  
 	}                    
                 
         .uncle_grandpa { 
-           margin-top: -145px;
+           margin-top: -127px;
            margin-left: -500px;
         }
               
@@ -512,9 +516,7 @@
                   <img src="images/uncle_grandpa_splashed.png" alt="Uncle Grandpa getting blasted">
                </div>
                 
-               <div class="footer">
-	    	  © 2016 Hasbro. All Rights Reserved.
-               </div>
+              
                 
                <div class="drag_to_rotate">
                   <img src="images/drag_to_rotate.png" alt="Drag to Rotate"/>
@@ -541,7 +543,9 @@
     </div>
 			
 		</div><!--end #container-->
-
+			<div class="footer">
+	    	  © 2016 Hasbro. All Rights Reserved.
+               </div>
 		<!--#include virtual="/tools/universal-nav/footer.html" -->
 		
 		<!--VENDOR JS HERE-->
